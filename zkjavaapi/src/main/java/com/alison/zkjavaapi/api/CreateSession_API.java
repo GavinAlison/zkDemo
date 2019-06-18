@@ -17,8 +17,7 @@ public class CreateSession_API {
     private static CountDownLatch connectSemaphore = new CountDownLatch(1);
 
     public static void main(String[] args) throws Exception {
-//        createSession();
-        createSessionWithSID();
+        createSession();
     }
 
     public static void createSession() throws Exception {
@@ -61,7 +60,6 @@ public class CreateSession_API {
     }
 
     static class MyWatcher implements Watcher {
-        @Override
         public void process(WatchedEvent watchedEvent) {
 //            只注册一次
             System.out.println("receive watched event:" + watchedEvent);

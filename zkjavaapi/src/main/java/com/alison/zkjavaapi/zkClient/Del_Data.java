@@ -12,7 +12,7 @@ public class Del_Data {
     public static void main(String[] args) throws Exception {
 //        ZkClient删除节点数据
         String path = "/zk-book";
-        ZkClient zkClient = new ZkClient(ZKConstant.CONNET_STR, ZKConstant.SESSION_TIMEOUT);
+        ZkClient zkClient = new ZkClient(ZKConstant.CONNET_STR1, ZKConstant.SESSION_TIMEOUT);
         zkClient.createPersistent(path, "");
         zkClient.createPersistent(path+"/c1", "");
         zkClient.deleteRecursive(path);

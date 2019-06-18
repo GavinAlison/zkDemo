@@ -1,5 +1,6 @@
 package com.alison.zkjavaapi.zkClient;
 
+import com.alison.zkjavaapi.common.ZKConstant;
 import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;
 
@@ -12,7 +13,7 @@ public class Get_Data {
     public static void main(String[] args) throws Exception {
         //ZkClient获取节点数据
         String path = "/zk-book";
-        ZkClient zkClient = new ZkClient("domain1.book.zookeeper:2181", 5000);
+        ZkClient zkClient = new ZkClient(ZKConstant.CONNET_STR1, ZKConstant.CONNECT_TIMEOUT);
         zkClient.createEphemeral(path, "123");
 
         zkClient.subscribeDataChanges(path, new IZkDataListener() {
@@ -25,10 +26,9 @@ public class Get_Data {
             }
         });
 
-        System.out.println(zkClient.readData(path));
+        System.out.println((String) zkClient.readData(path));
         zkClient.writeData(path, "456");
         Thread.sleep(1000);
         zkClient.delete(path);
-        Thread.sleep(Integer.MAX_VALUE);
     }
 }

@@ -1,5 +1,6 @@
 package com.alison.zkjavaapi.zkClient;
 
+import com.alison.zkjavaapi.common.ZKConstant;
 import org.I0Itec.zkclient.IZkChildListener;
 import org.I0Itec.zkclient.ZkClient;
 
@@ -15,7 +16,7 @@ public class Get_Children {
     public static void main(String[] args) throws Exception {
 //        ZkClient获取子节点列表。
         String path = "/zk-book";
-        ZkClient zkClient = new ZkClient("domain1.book.zookeeper:2181", 5000);
+        ZkClient zkClient = new ZkClient(ZKConstant.CONNET_STR1, ZKConstant.CONNECT_TIMEOUT);
         zkClient.subscribeChildChanges(path, new IZkChildListener() {
             public void handleChildChange(String parentPath, List<String> currentChilds) throws Exception {
                 System.out.println(parentPath + " 's child changed, currentChilds:" + currentChilds);
