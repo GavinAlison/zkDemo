@@ -30,5 +30,6 @@ public class Get_Data {
         zkClient.writeData(path, "456");
         Thread.sleep(1000);
         zkClient.delete(path);
+        Thread.sleep(Integer.MAX_VALUE);
     }
 }
