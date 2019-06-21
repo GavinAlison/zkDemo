@@ -12,16 +12,17 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
  * @Version 1.0
  */
 public class Create_Session {
+
+    public static void main(String[] args) throws Exception {
+
+    }
+
     //使用curator来创建一个ZooKeeper客户端
     public void create_session_sample() throws Exception {
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
-        CuratorFramework client =
-                CuratorFrameworkFactory
-                        .newClient(ZKConstant.CONNET_STR1,
-                                5000,
-                                3000,
-                                retryPolicy);
+        CuratorFramework client = CuratorFrameworkFactory.newClient(ZKConstant.CONNET_STR1, ZKConstant.SESSION_TIMEOUT, ZKConstant.CONNECT_TIMEOUT, retryPolicy);
         client.start();
+        System.out.println(client);
         Thread.sleep(Integer.MAX_VALUE);
     }
 
