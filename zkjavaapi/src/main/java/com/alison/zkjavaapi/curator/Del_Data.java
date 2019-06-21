@@ -13,8 +13,6 @@ import org.apache.zookeeper.data.Stat;
  * @Version 1.0
  */
 public class Del_Data {
-
-    //使用Curator删除节点
     static String path = "/zk-book/c1";
     static CuratorFramework client = CuratorFrameworkFactory.builder()
             .connectString(ZKConstant.CONNET_STR1)

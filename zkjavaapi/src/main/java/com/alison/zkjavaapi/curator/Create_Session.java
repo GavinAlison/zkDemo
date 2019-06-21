@@ -52,6 +52,4 @@ public class Create_Session {
         client.start();
         Thread.sleep(Integer.MAX_VALUE);
     }
-
-
 }

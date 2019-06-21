@@ -8,7 +8,8 @@ package com.alison.zkjavaapi.common;
  */
 public class ZKConstant {
     public static final String CONNET_STR = "192.168.56.101:2181,192.168.56.102:2181,192.168.56.103:2181";
-    public static final String CONNET_STR1 = "192.168.56.102:2181";
+    public static final String CONNET_STR1 = "192.168.56.103:2181";
+    public static final String CONNET_STR2 = "192.168.56.101:2181";
     public static final int SESSION_TIMEOUT = 10000;
     public static final int CONNECT_TIMEOUT = 50000;
 
