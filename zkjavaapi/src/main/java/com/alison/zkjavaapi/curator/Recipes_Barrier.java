@@ -17,7 +17,6 @@ public class Recipes_Barrier {
     static DistributedBarrier barrier;
 
     public void Recipes_Barrier() throws Exception {
-
         for (int i = 0; i < 5; i++) {
             new Thread(new Runnable() {
                 public void run() {

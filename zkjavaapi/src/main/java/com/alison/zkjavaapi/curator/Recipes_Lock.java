@@ -6,6 +6,7 @@ package com.alison.zkjavaapi.curator;
  * @Version 1.0
  */
 
+import com.alison.zkjavaapi.common.ZKConstant;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;

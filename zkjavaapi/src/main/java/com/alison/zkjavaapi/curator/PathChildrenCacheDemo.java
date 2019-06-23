@@ -62,7 +62,7 @@ public class PathChildrenCacheDemo {
 
     static ExecutorService tp = Executors.newFixedThreadPool(2);
 
-    public void pathChildrenCache_Sample_ExecutorService() throws Exception {
+    public void pathchildrencache_sample_executorservice() throws Exception {
         client.start();
         System.out.println(Thread.currentThread().getName());
         // 指定executorService
@@ -99,7 +99,7 @@ public class PathChildrenCacheDemo {
     }
 
 
-    public void pathChildrenCache_Sample_NoCacheData() throws Exception {
+    public void pathchildrencache_sample_nocachedata() throws Exception {
         client.start();
         PathChildrenCache cache = new PathChildrenCache(client, path, true);
         cache.start(PathChildrenCache.StartMode.POST_INITIALIZED_EVENT);
@@ -132,7 +132,7 @@ public class PathChildrenCacheDemo {
         Thread.sleep(Integer.MAX_VALUE);
     }
 
-    public void pathChildrenCache_Sample_POST_INITIALIZED_EVENT() throws Exception {
+    public void pathchildrencache_sample_post_initialized_event() throws Exception {
         client.start();
         PathChildrenCache cache = new PathChildrenCache(client, path, true);
         cache.start(PathChildrenCache.StartMode.NORMAL);
