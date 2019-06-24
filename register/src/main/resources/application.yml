@@ -1,0 +1,16 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /register
+spring:
+  application:
+    name: register
+    zookeerper:
+      connectString: 192.168.56.103:2181
+      discovery:
+        enabled: true
+        register: true
+
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN
